@@ -76,7 +76,7 @@ else:
     gap_text = f"Gap = {info['gap_indir'][0]:.6f} eV"
 
 # ======================
-# 1️⃣ BOTH SPINS
+#  BOTH SPINS
 # ======================
 fig, ax = plt.subplots(figsize=(fig_w, fig_h))
 
@@ -102,13 +102,13 @@ plt.savefig(f"{seed}_both.png", dpi=300)
 plt.close(fig)
 
 # ======================
-# 2️⃣ UP ONLY
+#UP ONLY
 # ======================
 fig, ax = plt.subplots(figsize=(fig_w, fig_h))
 
 bs.plot_bs(
     ax,
-    spin_index=0,        # ✅ IMPORTANT FIX
+    spin_index=0,        # IMPORTANT FIX
     Elim=(ymin, ymax),
     mark_gap=False       # avoid internal bug
 )
@@ -120,13 +120,13 @@ plt.savefig(f"{seed}_Up.png", dpi=300)
 plt.close(fig)
 
 # ======================
-# 3️⃣ DOWN ONLY
+# OWN ONLY
 # ======================
 fig, ax = plt.subplots(figsize=(fig_w, fig_h))
 
 bs.plot_bs(
     ax,
-    spin_index=1,        # ✅ IMPORTANT FIX
+    spin_index=1,        # IMPORTANT FIX
     Elim=(ymin, ymax),
     mark_gap=False
 )
